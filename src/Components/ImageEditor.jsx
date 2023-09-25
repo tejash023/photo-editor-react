@@ -2,15 +2,21 @@ import { useState } from "react";
 
 const ImageEditor = () => {
   const [filterValue, setFilterValue] = useState("");
+  const [imageUrl, setImageUrl] = useState(
+    "https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/cms/uploads/vaomydzwzbavlxugyp6e"
+  );
+
+  async function getImages() {
+    const response = await fetch("https://source.unsplash.com/random");
+    console.log(response);
+    setImageUrl(response.url);
+  }
   return (
     <div className="section">
       <h2>Image Editor</h2>
+      <button onClick={getImages}>Fetch New Image</button>
       <div className="image-area">
-        <img
-          style={{ filter: `${filterValue}` }}
-          src="https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/cms/uploads/vaomydzwzbavlxugyp6e"
-          alt="image"
-        />
+        <img style={{ filter: `${filterValue}` }} src={imageUrl} alt="image" />
       </div>
       <div className="editor-area">
         <div

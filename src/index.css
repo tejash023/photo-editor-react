@@ -33,7 +33,7 @@ h2 {
 }
 
 .image-area {
-  width: 50%;
+  width: 45%;
 }
 
 .image-area img {
@@ -47,7 +47,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .filter {
@@ -64,5 +64,20 @@ h2 {
 .filter:hover {
   cursor: pointer;
   transform: scale(1.05);
+  transition: all 0.1s ease-in;
+}
+
+button {
+  background-color: rgb(97, 153, 12);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(80, 126, 10);
   transition: all 0.1s ease-in;
 }
