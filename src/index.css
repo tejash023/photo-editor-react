@@ -41,6 +41,7 @@ h2 {
   overflow: hidden;
   object-fit: cover;
   border-radius: 10px;
+  height: 300px;
 }
 
 .editor-area {
@@ -57,14 +58,15 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background-color: mistyrose;
-  color: midnightblue;
+  background-color: rgb(0, 0, 0);
+  color: rgba(247, 247, 247, 0.575);
   padding: 15px;
 }
 .filter:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: all 0.1s ease-in;
+  border: 1px solid greenyellow;
 }
 
 button {
