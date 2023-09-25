@@ -47,6 +47,7 @@ const ImageEditor = () => {
           None
         </div>
       </div>
+      {filterValue && <button>Download Image</button>}
     </div>
   );
 };
