@@ -1,5 +1,11 @@
-function App() {
-  return <div>Photo Editor</div>;
-}
+import ImageEditor from "./Components/ImageEditor";
+
+const App = () => {
+  return (
+    <div className="container">
+      <ImageEditor />
+    </div>
+  );
+};
 
 export default App;
