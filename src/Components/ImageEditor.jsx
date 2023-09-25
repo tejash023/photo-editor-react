@@ -27,7 +27,7 @@ const ImageEditor = () => {
         </div>
         <div
           className="filter invert"
-          onClick={() => setFilterValue("invert(1)")}
+          onClick={() => setFilterValue("sepia(1)")}
         >
           Dublin
         </div>
