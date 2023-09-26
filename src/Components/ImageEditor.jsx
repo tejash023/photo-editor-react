@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { saveAs } from "file-saver";
 
 const ImageEditor = () => {
   const [filterValue, setFilterValue] = useState("");
@@ -11,6 +12,11 @@ const ImageEditor = () => {
     console.log(response);
     setImageUrl(response.url);
   }
+
+  const downloadImage = () => {
+    saveAs(imageUrl, "image.jpg");
+  };
+
   return (
     <div className="section">
       <h2>Image Editor</h2>
@@ -53,7 +59,7 @@ const ImageEditor = () => {
           None
         </div>
       </div>
-      {filterValue && <button>Download Image</button>}
+      {filterValue && <button onClick={downloadImage}>Download Image</button>}
     </div>
   );
 };
